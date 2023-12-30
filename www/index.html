@@ -1,65 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Super Mario</title>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  
+<link rel="stylesheet" href="css/style.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
+</head>
 
-    <body onload="zoom()">
-        <!-- The images used were downloaded from: http://www.videogamesprites.net/SuperMarioBros1/ -->
+<body>
+  <div id="background"><!-- Main background -->
+             
+        <div id="result"></div>
+             
+         <div id="main">
+             <div id="first-rows">
+              <button class="del-bg" id="delete">Del</button>
+                 <button value="%" class="btn-style operator opera-bg fall-back">%</button>
+                 <button value="+" class="btn-style opera-bg value align operator">+</button>
+                 </div>
+                 
+               <div class="rows">
+             <button value="7" class="btn-style num-bg num first-child">7</button>
+                 <button value="8" class="btn-style num-bg num">8</button>
+                 <button value="9" class="btn-style num-bg num">9</button>
+                 <button value="-" class="btn-style opera-bg operator">-</button>
+                 </div>
+                 
+                 <div class="rows">
+                 <button value="4" class="btn-style num-bg num first-child">4</button>
+                 <button value="5" class="btn-style num-bg num">5</button>
+                 <button value="6" class="btn-style num-bg num">6</button>
+                 <button value="*" class="btn-style opera-bg operator">x</button>
+                 </div>
+                 
+                 <div class="rows">
+                 <button value="1" class="btn-style num-bg num first-child">1</button>
+                 <button value="2" class="btn-style num-bg num">2</button>
+                 <button value="3" class="btn-style num-bg num">3</button>
+                 <button value="/" class="btn-style opera-bg operator">/</button>
+                 </div>
+                 
+                 <div class="rows">
+                 <button value="0" class="num-bg zero" id="delete">0</button>
+                 <button value="." class="btn-style num-bg period fall-back">.</button>
+                 <button value="=" id="eqn-bg" class="eqn align">=</button>
+                 </div>
+                
+             </div>
+         
+         </div>
 
-        <!-- Header and Sky+Cloud -->
-        <div class="sky">
-            <div class="scorebar">
-                <p>
-                    <span class="topline-mario">MARIO</span>
-                    <span class="topline-world">WORLD</span>
-                    <span class="topline-time">TIME</span>
-                    <span class="bottomline-score">OOOOOO</span>
-                    <span class="bottomline-coin">
-                        <img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif" height="40px"/> x OO
-                    </span>
-                    <span class="bottomline-world">1 - 1</span>
-                    <span class="bottomline-time">111</span>
-                </p>
-            </div>
 
-            <img class="cloud" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudSingle.gif">
-            <img class="cloud" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudDouble.gif">
-            <img class="cloud" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudTriple.gif">
-        </div>
+         <script src="js/index.js"></script>
 
-        <!-- Ground -->
-        <div class="ground">
-
-            <!-- Bricks -->
-            <div class="skyblocks">
-                <img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px;">
-                <img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/QuestionBlock.gif" height="70px;">
-                <img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px;">
-                <img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px;">
-            </div>
-
-            <!-- Bush -->
-            <img class="bush" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushSingle.gif" height="70px;">
-            <img class="bush" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushDouble.gif" height="70px;">
-            <img class="bush" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushSingle.gif" height="70px;">
-
-            <!-- Mario Lives here :D -->
-            <div class="mario"></div>
-        </div>
-
-        <!-- JS Scripts -->
-        <script type="text/javascript">
-            // Makes screen zoomOut on page load. Good for better view.
-            function zoom() {
-                document.body.style.zoom = "50%" 
-            }
-        </script>
-    </body>
+</body>
 </html>
